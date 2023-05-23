@@ -1,0 +1,107 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+.wd-top-row {
+    clear: both;
+ }
+
+.wd-search-bar {
+    width: 100%;
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+}
+
+.wd-search-input {
+    display: flex;
+    align-items: center;
+    background-color: lightgray;
+    border-radius: 20px;
+    padding: 5px;
+    margin-right: 10px;
+  }
+
+  .wd-search-input input {
+    border: none;
+    background-color: lightgray;
+    color: darkgray;
+    padding: 5px;
+}
+.wd-tabs-list{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    justify-content: space-between;
+}
+
+.wd-tabs-list li{
+    padding-top: 20px;
+    padding-right: 10px;
+    float: left;
+}
+
+.wd-tabs-list li a {
+    display: block;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+.wd-tabs-list li a  {
+    padding: 10px;
+}
+
+.wd-tabs-list li a.active {
+    border-bottom: 2px solid #1da1f2;
+}
+
+.wd-explore-photo {
+    position: relative;
+    display: inline-block;
+}
+
+ .wd-explore-photo img {
+    display: block;
+    width: 100%;
+    height: auto;
+ }
+
+ .wd-overlaid-text {
+    position: absolute;
+    bottom: 20px;
+    left: 40px;
+    color: white;
+ }
+
+ .wd-overlaid-text h2 {
+    font-family: Arial, Helvetica, sans-serif;
+ }
+
+.wd-trending-div {
+    display: flex;
+    align-items:flex-start;
+    justify-content: space-between;
+}
+
+.wd-trending-p {
+    color: darkgray;
+    font-family: Arial, Helvetica, sans-serif;
+    padding-bottom: 5px;
+    
+}
+
+.wd-trending-title {
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    padding-bottom: 5px;
+}
+
+.wd-trending {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    justify-content: space-between;
+    padding-bottom: 24px;
+}

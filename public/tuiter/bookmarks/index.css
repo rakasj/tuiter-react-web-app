@@ -1,0 +1,106 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.wd-bookmarks-top {
+    width: 100%;
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+}
+
+.wd-rounded-corners-top {
+    border-top-left-radius: 40px;
+    border-top-right-radius: 40px;
+}
+   
+.wd-rounded-corners-bottom {
+ border-bottom-left-radius: 40px;
+ border-bottom-right-radius: 40px;
+}
+
+.wd-bookmarks-tuit {
+    display: flex;
+    max-width: 750px;
+    height: auto;
+    border-bottom: solid; 
+    border-width: 1px; 
+    border-color: lightgray; 
+    padding-top: 12px;
+}
+
+.wd-bookmark-content {
+    padding: 12px;
+}
+
+.wd-bookmark-preview {
+    display: flex;
+    flex-direction: column;
+}
+  
+.wd-bookmark-preview div {
+  width: 377px;
+  border-style: solid; border-width: 1px; border-color: grey;
+  margin-top: 0; display: flex; flex-direction: column;
+  padding: 12px;
+}
+
+.wd-bookmark-preview p {
+    border-style: solid; border-width: 1px; border-color: grey;
+}
+
+.wd-bookmark-preview img {
+    height: 200px;
+    width: 400px;
+    border-style: solid; border-width: 1px; border-color: grey;
+}
+
+.wd-bookmark-left-col {
+    width: 10%;
+    float: left;
+    align-items: center;
+}
+
+.wd-bookmark-right-col {
+    width: 80%;
+    float: right;
+    align-items: left;
+}
+
+.wd-bookmark-tuit-stats {
+    display: flex; flex-direction: row; padding-top: 5px;
+    align-items: center;
+}
+
+.wd-bookmark-tuit-stats div {
+    display: flex; flex-direction: row; padding-right: 30px;
+    align-items: center;
+}
+
+.wd-bookmark-tuit-stats div i {
+    padding-right: 5px;
+}
+
+.wd-bookmark-info {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.wd-bookmark-info h4 {
+    padding-right: 12px;
+}
+.wd-bookmark-info p {
+    padding-right: 150px;
+}
+
+.wd-bookmark-tuit-stats a {
+    text-decoration: none;
+    color: grey;
+    align-items: center;
+}
+
+.wd-bookmarks-top div {
+    float: left; align-items: center; display: flex; flex-direction: row;
+}
