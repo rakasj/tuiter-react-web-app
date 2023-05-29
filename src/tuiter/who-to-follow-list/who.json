@@ -1,0 +1,21 @@
+[
+    {
+      "_id": 123,
+      "userName": "NASA",
+      "handle": "NASA",
+      "avatarIcon": "https://www.nasa.gov/sites/default/files/images/nasaLogo-570x450.png"
+    },
+    {
+      "_id": 234,
+      "userName": "Tesla",
+      "handle": "tesla",
+      "avatarIcon": "https://www.logodesignlove.com/images/monograms/tesla-logo-01.jpg"
+    },
+    {
+      "_id": 345,
+      "userName": "SpaceX",
+      "handle": "SpaceX",
+      "avatarIcon": "https://ih1.redbubble.net/image.1128804632.4941/ur,pin_large_front,square,600x600.jpg"
+    }
+   ]
+   
