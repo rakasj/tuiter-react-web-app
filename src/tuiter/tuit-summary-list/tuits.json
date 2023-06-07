@@ -1,10 +1,45 @@
-[{ "_id": 123, "topic": "Space", "userName": "SpaceX",
-   "title": "Tesla CyberTruck lands on Mars and picks up the Curiosity rover on its 6' bed",
-   "time": "2h",   "image": "https://imageio.forbes.com/specials-images/imageserve/5f1f37a40a5db2c8275972c0/-Photo-by-JOHN-THYS-AFP-via-Getty-Images-/960x0.jpg?format=jpg&width=960" },
- { "_id": 234, "topic": "Space",   "userName": "SpaceX",
-   "title": "100s of SpaceX Starships land on Mars after a 6 month journey. 1000s of Martian colonists being building Mars Base 1",
-   "time": "2h",   "image": "https://s.yimg.com/uu/api/res/1.2/w2UknG5MTKqFeEzE31ZLxg--~B/Zmk9ZmlsbDtoPTU3OTt3PTg3NTthcHBpZD15dGFjaHlvbg--/https://media-mbst-pub-ue1.s3.amazonaws.com/creatr-uploaded-images/2023-05/d61e2dd0-f9f1-11ed-9daf-24fc9876007a.cf.jpg" },
- { "_id": 345, "topic": "Energy",  "userName": "Tesla",
-   "title": "Tesla FSD finally makes driving obsolete. After years of delay, Tesla Full Self Driving can drive you to work while you work, play, or sleep",
-   "time": "4d",   "image": "https://hips.hearstapps.com/hmg-prod/images/2023-tesla-model-x-101-1671475309.jpeg?crop=0.381xw:0.456xh;0.385xw,0.262xh&resize=640:*" }
+[
+
+  {
+    "_id": 123,
+    "topic": "Space",
+    "userName": "NASA",
+    "title": "10s of SpaceX Starships land on Mars after a 6 month journey. 1000s of Martian colonists being building Mars Base 1",
+    "time": "2h",
+    "image": "https://s.yimg.com/uu/api/res/1.2/w2UknG5MTKqFeEzE31ZLxg--~B/Zmk9ZmlsbDtoPTU3OTt3PTg3NTthcHBpZD15dGFjaHlvbg--/https://media-mbst-pub-ue1.s3.amazonaws.com/creatr-uploaded-images/2023-05/d61e2dd0-f9f1-11ed-9daf-24fc9876007a.cf.jpg",
+    "liked": true,
+    "replies": 52,
+    "retuits": 126,
+    "likes": 1077,
+    "handle": "@spacex",
+    "tuit": "LIVE: Tune in as we review next steps for the Psyche mission, set to launch no earlier than Oct. 2023. The spacecraft will study a metal-rich asteroid of the same name that may be the partial core of a building block of rocky planets in our solar system."
+  },
+  {
+    "_id": 234,
+    "topic": "Space",
+    "userName": "NASA",
+    "title": "100s of SpaceX Starships land on Mars after a 6 month journey. 1000s of Martian colonists being building Mars Base 1",
+    "time": "2h",
+    "image": "https://s.yimg.com/uu/api/res/1.2/w2UknG5MTKqFeEzE31ZLxg--~B/Zmk9ZmlsbDtoPTU3OTt3PTg3NTthcHBpZD15dGFjaHlvbg--/https://media-mbst-pub-ue1.s3.amazonaws.com/creatr-uploaded-images/2023-05/d61e2dd0-f9f1-11ed-9daf-24fc9876007a.cf.jpg",
+    "liked": true,
+    "replies": 121,
+    "retuits": 362,
+    "likes": 2825,
+    "handle": "@spacex",
+    "tuit": "Today's CRS28 cargo launch is being waved off due to high winds in the recovery area."
+  },
+  {
+    "_id": 345,
+    "topic": "Space",
+    "userName": "NASA",
+    "title": "100s of SpaceX Starships land on Mars after a 6 month journey. 1000s of Martian colonists being building Mars Base 1",
+    "time": "2h",
+    "image": "https://s.yimg.com/uu/api/res/1.2/w2UknG5MTKqFeEzE31ZLxg--~B/Zmk9ZmlsbDtoPTU3OTt3PTg3NTthcHBpZD15dGFjaHlvbg--/https://media-mbst-pub-ue1.s3.amazonaws.com/creatr-uploaded-images/2023-05/d61e2dd0-f9f1-11ed-9daf-24fc9876007a.cf.jpg",
+    "liked": false,
+    "replies": 141,
+    "retuits": 1085,
+    "likes": 7062,
+    "handle": "@spacex",
+    "tuit": "Hurricane season in the Atlantic begins today. Our unique perspective from space allows us to study storms and their evolution, providing data to support forecasting and disaster responses"
+  }
 ]
