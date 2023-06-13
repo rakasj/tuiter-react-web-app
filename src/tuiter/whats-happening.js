@@ -8,6 +8,7 @@ import { BiBold, BiItalic } from 'react-icons/bi';
 import { useDispatch } from "react-redux";
 import { createTuit } from "./reducers/tuits-reducer";
 import nasaPic from "./who-to-follow-list/images/nasa.jpg"
+import { createTuitThunk } from "./services/tuits-thunk";
 
 const WhatsHappening = () => {
   let [whatsHappening, setWhatsHappening] = useState('');
@@ -16,9 +17,17 @@ const WhatsHappening = () => {
 
   const tuitClickHandler = () => {
     const newTuit = {
-      tuit: whatsHappening
+      tuit: whatsHappening,
+      liked: false,
+      likes: 0,
+      disliked: false,
+      dislikes: 0,
+      replies: 0,
+      retuits: 0,
+      time: "0h",
+      username: "julie"
     }
-    dispatch(createTuit(newTuit));
+    dispatch(createTuitThunk(newTuit));
     setWhatsHappening("");
   }
 

@@ -1,22 +1,30 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { FaHeart, FaRegComment, FaRetweet, FaUpload, FaRegHeart } from "react-icons/fa";
+import { FaHeart, FaRegComment, FaRetweet, FaUpload, FaRegHeart, FaThumbsDown, FaRegThumbsDown } from "react-icons/fa";
 import { HiOutlineX } from "react-icons/hi";
-import { deleteTuit, likeTuit } from "../reducers/tuits-reducer"
 import "./index.css"
 import nasaPic from "../who-to-follow-list/images/nasa.jpg"
 
+import { findTuitsThunk, deleteTuitThunk, updateTuitThunk } from "../services/tuits-thunk";
+
 
 const TuitsList = () => {
-  const { tuits } = useSelector(state => state.tuits);
-  
+  const { tuits, loading } = useSelector(state => state.tuits);
+
   const dispatch = useDispatch();
   const deleteTuitHandler = (id) => {
-    dispatch(deleteTuit(id));
+    dispatch(deleteTuitThunk(id));
   }
   const likeTuitHandler = (tuit) => {
-    dispatch(likeTuit(tuit));
+    dispatch(updateTuitThunk({ ...tuit, likes: tuit.likes + 1 }))
   }
+  const dislikeTuitHandler = (tuit) => {
+    dispatch(updateTuitThunk({ ...tuit, dislikes: tuit.dislikes + 1 }))
+  }
+  useEffect(() => {
+    dispatch(findTuitsThunk())
+  }, [])
+
 
   return (
     <ul className="list-group">
@@ -32,10 +40,10 @@ const TuitsList = () => {
 
               <div className="col-10 wd-tuit-div">
                 <button className="wd-delete-tuit-button" onClick={() => deleteTuitHandler(tuit._id)}>
-                  <HiOutlineX/>
+                  <HiOutlineX />
                 </button>
 
-                <div>{tuit.userName} . {tuit.time}</div>
+                <div><b>{tuit.username}</b> . {tuit.time}</div>
                 <div>{tuit.tuit}</div>
                 <div className="wd-tuit-stats">
                   <div>
@@ -55,6 +63,12 @@ const TuitsList = () => {
                       {tuit.liked ? <FaHeart /> : <FaRegHeart />}
                     </button>
                     {tuit.likes}
+                  </div>
+                  <div>
+                    <button onClick={() => dislikeTuitHandler(tuit)}>
+                      {tuit.disliked ? <FaThumbsDown /> : <FaRegThumbsDown />}
+                    </button>
+                    {tuit.dislikes}
                   </div>
                   <div>
                     <button>

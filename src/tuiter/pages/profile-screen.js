@@ -1,4 +1,68 @@
+import React, { useState, useEffect } from "react";
+import { useSelector, useDispatch } from "react-redux";
+import { useNavigate } from "react-router";
+import { profileThunk, logoutThunk, updateUserThunk }
+    from "../services/auth-thunks";
+import LoginScreen from "../user/login-screen";
+
 function ProfileScreen() {
-    return <h1>Profile</h1>;
-   }
-   export default ProfileScreen;
+    const { currentUser } = useSelector((state) => state.user);
+    const [profile, setProfile] = useState(currentUser);
+    const dispatch = useDispatch();
+    const navigate = useNavigate();
+    const save = () => { 
+        console.log("dispatch update profile ", profile);
+        dispatch(updateUserThunk(profile)); };
+
+    useEffect(() => {
+        async function loadProfile() {
+            const { payload } = await dispatch(profileThunk());
+            setProfile({
+               payload
+            });
+            
+        }
+        loadProfile();
+    }, []);
+
+    console.log("USER: ", currentUser);
+    return (
+        currentUser === null ? <LoginScreen/> : (
+            <div>
+            <h1>Profile Screen</h1>
+            {currentUser && (<h2>{currentUser.firstName}</h2>)}
+            {currentUser && (<h2>{currentUser.lastName}</h2>)}
+            {profile && (<div>
+                <div>
+                    <label>First Name</label>
+                    <input type="text" value={profile.firstName}
+                        onChange={(event) => {
+                            const newProfile = {
+                                ...profile, firstName: event.target.value,
+                            };
+                            setProfile(newProfile);
+                        }} />
+                </div>
+                <div>
+                    <label>Last Name</label>
+                    <input type="text" value={profile.lastName}
+                        onChange={(event) => {
+                            const newProfile = {
+                                ...profile, lastName: event.target.value,
+                            };
+                            console.log("new profile ln ", newProfile)
+                            setProfile(newProfile);
+                        }} />
+                </div></div>
+            )}
+            <button
+                onClick={() => {
+                    dispatch(logoutThunk());
+                    navigate("/tuiter/login");
+                }}>                   Logout</button>
+            <button onClick={save}>Save  </button>
+        </div>
+        )
+    );
+}
+export default ProfileScreen;

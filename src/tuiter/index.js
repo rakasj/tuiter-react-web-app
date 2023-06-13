@@ -6,13 +6,23 @@ import ExploreScreen from "./explore-screen";
 import BookmarksScreen from "./pages/bookmarks-screen";
 import ProfileScreen from "./pages/profile-screen";
 import WhoToFollowList from "./who-to-follow-list";
+import LoginScreen from "./user/login-screen";
+import RegisterScreen from "./user/register-screen";
+
 import whoReducer from "./reducers/who-reducer";
+import authReducer from "./reducers/auth-reducer";
 import { configureStore } from '@reduxjs/toolkit';
 import { Provider } from "react-redux";
 import tuitsReducer from "./reducers/tuits-reducer";
 
 const store = configureStore(
-    { reducer: { who: whoReducer, tuits: tuitsReducer } });
+    {
+        reducer: { who: whoReducer, tuits: tuitsReducer, user: authReducer },
+        middleware: getDefaultMiddleware =>
+            getDefaultMiddleware({
+                serializableCheck: false,
+            }),
+    });
 
 function Tuiter() {
     return (
@@ -30,6 +40,9 @@ function Tuiter() {
                             <Route path="/bookmarks" element={<BookmarksScreen />} />
                             <Route path="/profile" element={<ProfileScreen />} />
                             <Route path="/notifications" element={<h1>Notifications</h1>} />
+                            <Route path="/login" element={<LoginScreen />} />
+                            <Route path="/register" element={<RegisterScreen />} />
+
                         </Routes>
                     </div>
                     <div className="col-3">
